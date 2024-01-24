@@ -6,7 +6,7 @@ Motivation <br/>
 The veterinary industry has experienced significant growth since the turn of the millennium. Having worked part-time as an ecommerce analyst for several years in a clinic chain, I've observed that the medical staff operates more efficiently when the systems utilize a Priority Queue as a collection class to manage the insertion of more serious cases. The Priority Queue is structured based on Linked Lists to store data but employs distinct algorithms for handling enqueue and dequeue operations.
 It was my 2022 school project on data structures, and I start to revamp the whole by simplifying the entire project using C#. I incorporated various software patterns, such as Factory and Decorator, to streamline and enhance the project.
 
-Project Structure
+Project Structure<br/>
 The structure can be divided into 3 parts
 1.	Base Class
 a.	LinkedList
