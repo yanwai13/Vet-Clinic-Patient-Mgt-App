@@ -1,4 +1,5 @@
-Summary of the project
+Summary of the project <b/>
+
 This application empowers the animal clinic staff to effectively organize the queue of sick pets by considering severity, continuity, and time. The medical team can effortlessly enter the pet's name, sick name, and severity, continuity, and time indicators. Subsequently, the system automatically reorders the queue, prioritizing pets with higher scores based on the calculated severity, continuity, and time factors. This ensures that the veterinarian attends to the patient (pet) with the highest calculated score first.
 
 Motivation
