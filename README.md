@@ -22,7 +22,8 @@ a.	Action : To control the streams which Factory of Display, Input or Move being
 b.	Display
 c.	Input
 d.	Move
-4.	Validator (Decorator Class to recycle method of validation for userInput)
+e.  Search : Search the patient from the queue by their name
+5.	Validator (Decorator Class to recycle method of validation for userInput)
 a.	EmptyValidator
 b.	IntegerValidator
 c.	StringValidator
