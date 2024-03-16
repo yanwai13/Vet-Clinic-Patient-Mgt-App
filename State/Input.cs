@@ -63,7 +63,7 @@ namespace VetClinicPatientMgtProject.State
 
             bool isAlimentInputFinish = false;
 
-            string? sickness_name = "";
+            
 
             //bigger loop for input
             do
@@ -74,7 +74,7 @@ namespace VetClinicPatientMgtProject.State
 
                 MenuOperations.Print("Enter ailment (leave blank when done) :");
 
-                string? aliment = Console.ReadLine();
+                string aliment = Console.ReadLine() ?? "";
 
                 
                 if (DetermineValidation("empty", aliment) )
@@ -138,7 +138,7 @@ namespace VetClinicPatientMgtProject.State
 
                         } while (!isClinicDataInputFinish);
 
-                        pet?.AddSickness(new Sickness(sickness_name, Convert.ToInt32(severity), Convert.ToInt32(time), Convert.ToInt32(cont)));
+                        pet?.AddSickness(new Sickness(aliment, Convert.ToInt32(severity), Convert.ToInt32(time), Convert.ToInt32(cont)));
                    
                    
                 }

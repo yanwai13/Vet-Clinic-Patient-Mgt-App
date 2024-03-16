@@ -38,7 +38,7 @@ namespace VetClinicPatientMgtProject.State
                 MenuOperations.Print($"The Total Score is {headNode.data.CalculateScore()}");
 
                 Node<Sickness> sNode = headNode.data.GetSickness().GetHead();
-                Console.Write($"The Sickness is");
+                Console.Write($"The Sickness is ");
                 while (sNode != null)
                 {
                     MenuOperations.Print(sNode.data.name + ",");
@@ -63,24 +63,24 @@ namespace VetClinicPatientMgtProject.State
             }
 
             Node<Pet> headNode = processed_q.GetHead();
-
             while (headNode != null)
             {
 
-                MenuOperations.Print(headNode.data.name);
-
-                MenuOperations.Print(headNode.data.CalculateScore());
+                MenuOperations.Print($"The Patient Name is {headNode.data.name}");
+                MenuOperations.Print($"The Total Score is {headNode.data.CalculateScore()}");
 
                 Node<Sickness> sNode = headNode.data.GetSickness().GetHead();
-
+                Console.Write($"The Sickness is ");
                 while (sNode != null)
                 {
-                    MenuOperations.Print(sNode.data.name);
+                    MenuOperations.Print(sNode.data.name + ",");
                     sNode = sNode.next;
                 }
+                MenuOperations.Print("");
                 headNode = headNode.next;
 
             }
+           
 
             MenuOperations.ReturnToMainScreen();
 

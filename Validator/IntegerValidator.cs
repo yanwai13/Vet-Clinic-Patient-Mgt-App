@@ -19,6 +19,12 @@ namespace VetClinicPatientMgtProject.Validator
             _valid = AddObserver(input);
         }
         protected override bool AddObserver(string s) { 
-            return int.TryParse(s, out int r); }
+            var result = int.TryParse(s, out int r);
+
+            if (result == true && r > 0)
+                return true;
+
+            return false;
+        }
     }
 }

@@ -1,8 +1,14 @@
-﻿using System.Collections;
+﻿/*
+ newly Update
+ */
+
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Cryptography;
 using System.Xml.Linq;
 using VetClinicPatientMgtProject.State;
+using VetClinicPatientMgtProject.Validator;
 using Action = VetClinicPatientMgtProject.State.Action;
 
 namespace VetClinicPatientMgtProject
@@ -13,8 +19,6 @@ namespace VetClinicPatientMgtProject
         
         static void Main(string[] args)
         {
-            
-           
 
             bool isExited = false;
 
@@ -37,9 +41,26 @@ namespace VetClinicPatientMgtProject
 
                     try
                     {
-                        selection_no = Convert.ToInt32(Console.ReadLine());
-                       
-                        success = true;
+
+                         string input = Console.ReadLine() ?? "";
+
+                        var isValid = new IntegerValidator(input).ReturnValid();
+                        selection_no = Convert.ToInt32(input);
+
+                        if (!isValid || selection_no < 0 || selection_no > 6)
+                        {
+                            success = false;
+
+                            Console.WriteLine("Please Input Proper Selection. Please Press any key to continue");
+                            Console.ReadKey();
+
+                        }
+
+                        else {
+                            
+                            success = true;
+                        }
+                            
                     }
                     catch (FormatException)
                     {

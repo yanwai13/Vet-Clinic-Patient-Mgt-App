@@ -43,9 +43,7 @@ namespace VetClinicPatientMgtProject.State
 
             switch (actionType)
             {
-                case 0:
-                    isExit = true;
-                    break;
+               
                 case 1:
                     i = new Input();
                     i.Action(q, processed_q);
@@ -66,12 +64,20 @@ namespace VetClinicPatientMgtProject.State
                 case 4:
                     i = new Display();
                     i.ViewProcessedPatients(processed_q);
-
                     break;
-
+                case 5:
+                    i = new Search();
+                    i.Action(q, processed_q);
+                    break;
+                case 6:
+                    isExit = true;
+                    Console.WriteLine("Program Exit. Press any key to continue");
+                    Console.ReadKey();
+                    break;
                 default:
 
-                    MenuOperations.Print("Invalid Input");
+                    MenuOperations.Print("Invalid Input. Please Press Key to Continue");
+                    Console.ReadKey();  
                     break;
             }
 

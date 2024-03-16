@@ -15,6 +15,10 @@ namespace VetClinicPatientMgtProject.Validator
         public StringValidator(string input) : base() {
             _valid = AddObserver(input);
         }
-        protected override bool AddObserver (string s) { return s.All(char.IsLetter);  } 
+        protected override bool AddObserver (string s) {
+
+            //use LINQ to check each of the character of the string either letter or white space only         
+            return s.All(c => char.IsLetter(c) || char.IsWhiteSpace(c));
+        } 
     }
 }

@@ -12,11 +12,12 @@ namespace VetClinicPatientMgtProject.Clinic
     {
         public string name { get; set; }
 
-        DoublyLinkedList<Sickness> sickness = new DoublyLinkedList<Sickness>();
+        DoublyLinkedList<Sickness> sickness = null;
 
         public Pet(string name)
         {
             this.name = name;
+            sickness = new DoublyLinkedList<Sickness>();
         }
 
         public void AddSickness(Sickness s)
@@ -42,5 +43,7 @@ namespace VetClinicPatientMgtProject.Clinic
         {
             return sickness;
         }
+
+      
     }
 }

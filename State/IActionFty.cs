@@ -13,5 +13,6 @@ namespace VetClinicPatientMgtProject.State
         public void Action(PriorityQueue q, DoublyLinkedList<Pet> processed_q);
         public void DisplayQueue(PriorityQueue q);
         public void ViewProcessedPatients(DoublyLinkedList<Pet> processed_q);
+     
     }
 }

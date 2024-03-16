@@ -21,8 +21,9 @@ namespace VetClinicPatientMgtProject
             Print("1 - Add Patient ");
             Print("2 - Process Next Patient in Queue");
             Print("3 - Display Queue");
-            Print("4 - View Processed Patients History");         
-            Print("0 - Exit\n");
+            Print("4 - View Processed Patients History");
+            Print("5 - Search Patients History");
+            Print("6 - Exit\n");
         }
 
         public static bool IsEmpty(string s)
