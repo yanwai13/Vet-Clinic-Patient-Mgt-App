@@ -1,5 +1,5 @@
 /***Newly Update on Mar 16, 2024 <br/>
-Incorporate a search functionality enabling the user to search patient by their name, get the queue position and access their details.**/
+<b>Incorporate a search functionality enabling the user to search patient by their name, get the queue position and access their details.</b>**/
 
 Summary of the project <br/>
 
