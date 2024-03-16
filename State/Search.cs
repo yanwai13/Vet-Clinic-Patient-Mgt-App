@@ -44,11 +44,13 @@ namespace VetClinicPatientMgtProject.State
 
             var node = q.getHead();
 
+            int index = 0;
             while (node != null)
             {
+                index++;
                 if (node.data.name.ToLower().Replace(" ", "").Contains(name.ToLower().Replace(" ", "")))                
                 {
-
+                    MenuOperations.Print($"Position : {index}");
                     MenuOperations.Print($"The Patient Name is {node.data.name}");
                     MenuOperations.Print($"The Total Score is {node.data.CalculateScore()}");
 
