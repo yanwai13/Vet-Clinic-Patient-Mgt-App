@@ -1,7 +1,28 @@
 
 /***Newly Update on Mar 16, 2024 <br/>
 <b>Incorporate a search functionality enabling the user to search patient by their name, get the queue position and access their details.</b>**/
+Project Structure<br/>
+The structure can be divided into 3 parts
+1.	Base Class
+a.	LinkedList
+b.	Priority Queue
 
+3.	Clinic
+a.	Pet Class
+b.	Sickness Class
+
+4.	State (Factory Pattern to switch between the Action State using IActionFty class)
+a.	Action : To control the streams which Factory of Display, Input or Move being created
+b.	Display
+c.	Input
+d.	Move
+e.  Search : Search the patient from the queue by their name
+
+5.	Validator (Decorator Class to recycle method of validation for userInput)
+a.	EmptyValidator
+b.	IntegerValidator
+c.	StringValidator
+d.	ValidatorClass (Abstract Class)
 Summary of the project <br/>
 
 This application empowers the animal clinic staff to effectively organize the queue of sick pets by considering severity, continuity, and time. The medical team can effortlessly enter the pet's name, sick name, and severity, continuity, and time indicators. Subsequently, the system automatically reorders the queue, prioritizing pets with higher scores based on the calculated severity, continuity, and time factors. This ensures that the veterinarian attends to the patient (pet) with the highest calculated score first.
