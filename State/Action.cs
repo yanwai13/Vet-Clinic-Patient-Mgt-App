@@ -69,7 +69,11 @@ namespace VetClinicPatientMgtProject.State
                     i = new Search();
                     i.Action(q, processed_q);
                     break;
-                case 6:
+                case 6:         
+                    i = new Statistics();
+                    i.Action(q, processed_q); 
+                    break;
+                case 7:
                     isExit = true;
                     Console.WriteLine("Program Exit. Press any key to continue");
                     Console.ReadKey();

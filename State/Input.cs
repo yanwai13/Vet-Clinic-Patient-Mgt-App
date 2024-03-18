@@ -32,7 +32,11 @@ namespace VetClinicPatientMgtProject.State
                     validator = new IntegerValidator(input);
                     result = validator.ReturnValid();
                     break;
-         
+                case "date":
+                    validator = new DateValidator(input);
+                    result = validator.ReturnValid();
+                    break;
+
             }
 
             return result;
@@ -48,7 +52,7 @@ namespace VetClinicPatientMgtProject.State
             bool isNameInputFinish = true;
             do {
 
-                petName = Console.ReadLine();
+                petName = Console.ReadLine() ?? "";
 
                 isNameInputFinish = DetermineValidation("string", petName) && !DetermineValidation("empty", petName);
 
@@ -57,9 +61,31 @@ namespace VetClinicPatientMgtProject.State
 
 
             } while (!isNameInputFinish);
-                    
 
-            Pet? pet = new Pet(petName);
+            DateTime parsedDateTime;
+
+            bool isDateInputFinish = true;
+            string date = "";
+            do
+            {
+                MenuOperations.Print("Please enter a date and time (yyyy-MM-dd HH:mm:ss): or Enter for current date and time");
+
+                date = Console.ReadLine() ?? "";
+
+                if (date == "")
+                    date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                if (! (isDateInputFinish = DetermineValidation("date", date)))
+                {
+                    MenuOperations.Print("Please input a proper date");
+
+                }
+                
+
+
+            } while (!isDateInputFinish);
+
+            Pet? pet = new Pet(petName,  DateTime.Parse(date));
 
             bool isAlimentInputFinish = false;
 

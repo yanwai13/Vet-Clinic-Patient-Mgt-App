@@ -11,13 +11,15 @@ namespace VetClinicPatientMgtProject.Clinic
     public class Pet
     {
         public string name { get; set; }
+        public DateTime dateTime { get; set; }
 
         DoublyLinkedList<Sickness> sickness = null;
 
-        public Pet(string name)
+        public Pet(string name, DateTime dateTime)
         {
             this.name = name;
             sickness = new DoublyLinkedList<Sickness>();
+            this.dateTime = dateTime;
         }
 
         public void AddSickness(Sickness s)

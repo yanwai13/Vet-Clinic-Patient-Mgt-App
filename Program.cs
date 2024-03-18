@@ -37,7 +37,7 @@ namespace VetClinicPatientMgtProject
                
 
                 do {
-                    Console.WriteLine("Enter Option: or type 0 to quit");
+                    MenuOperations.Print("Enter Option: or type 0 to quit");
 
                     try
                     {
@@ -47,11 +47,11 @@ namespace VetClinicPatientMgtProject
                         var isValid = new IntegerValidator(input).ReturnValid();
                         selection_no = Convert.ToInt32(input);
 
-                        if (!isValid || selection_no < 0 || selection_no > 6)
+                        if (!isValid || selection_no < 0 || selection_no > 7)
                         {
                             success = false;
 
-                            Console.WriteLine("Please Input Proper Selection. Please Press any key to continue");
+                            MenuOperations.Print("Please Input Proper Selection. Please Press any key to continue");
                             Console.ReadKey();
 
                         }
